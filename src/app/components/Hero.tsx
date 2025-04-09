@@ -67,11 +67,6 @@ const Hero = () => {
             </p>
           </motion.div>
         </motion.div>
-        <div>
-            <div className="bg-gray-800 rounded-lg py-9 px-10 mt-7 shadow-2xl ">
-                <p>Working with him was a game changer!</p>
-            </div>
-        </div>
       </div>
     </section>
   );
