@@ -1,5 +1,6 @@
 "use client";
 
+import { GithubIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { MenuMobile } from "./menumobile";
@@ -46,9 +47,10 @@ export default function Header() {
             >
               Contato
             </a>
-            <div className="hidden items-center gap-8 uppercase text-white xl:flex">
-              <MenuMobile />
+            <div className="bg-[#00D8E0] px-9 py-3 rounded-2xl hover:bg-transparent hover:border hover:border-[#00D8E0] hover:text-[#00D8E0]   transition-all duration-300 cursor-pointer">
+              <GithubIcon/>
             </div>
+            <MenuMobile/>
           </div>
         </nav>
       </div>
