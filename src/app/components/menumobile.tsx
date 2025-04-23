@@ -48,7 +48,7 @@ export const MenuMobile = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="fixed left-0 top-0 z-[1001] h-screen w-full bg-black/50 "
+                className="fixed left-0 top-0 z-[100] h-screen w-full bg-black/50 "
               />
               <motion.div
                 ref={menuRef}
