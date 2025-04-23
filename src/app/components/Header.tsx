@@ -21,7 +21,9 @@ export default function Header() {
             />
           </Link>
         </div>
+
         <nav className="flex items-center gap-10">
+          {/* Menu desktop - visível apenas em xl+ */}
           <div className="hidden items-center gap-8 uppercase text-white xl:flex">
             <a
               href="#sobre"
@@ -47,10 +49,14 @@ export default function Header() {
             >
               Contato
             </a>
-            <div className="bg-[#00D8E0] px-9 py-3 rounded-2xl hover:bg-transparent hover:border hover:border-[#00D8E0] hover:text-[#00D8E0]   transition-all duration-300 cursor-pointer">
-              <GithubIcon/>
+            <div className="bg-[#00D8E0] px-9 py-3 rounded-2xl hover:bg-transparent hover:border hover:border-[#00D8E0] hover:text-[#00D8E0] transition-all duration-300 cursor-pointer">
+              <GithubIcon />
             </div>
-            <MenuMobile/>
+          </div>
+
+          {/* Menu mobile - visível abaixo de xl */}
+          <div className="xl:hidden">
+            <MenuMobile />
           </div>
         </nav>
       </div>

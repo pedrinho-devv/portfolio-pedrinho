@@ -4,7 +4,7 @@ import React from "react";
 export type MenuItem = {
   name: string;
   link: string;
-  icon?: React.ReactElement; // ← aqui você diz que "icon" é opcional e é um JSX.Element
+  icon?: React.ReactElement; 
 };
 
 export const menu: MenuItem[] = [

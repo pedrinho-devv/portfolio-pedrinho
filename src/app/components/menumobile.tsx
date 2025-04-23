@@ -48,7 +48,7 @@ export const MenuMobile = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="fixed left-0 top-0 z-[100] h-screen w-full bg-black/50"
+                className="fixed left-0 top-0 z-[1001] h-screen w-full bg-black/50 "
               />
               <motion.div
                 ref={menuRef}
@@ -95,7 +95,7 @@ export const MenuMobile = () => {
                         setIsOpen(false);
                         setIsModalOpen(true);
                       }}
-                      className="cursor-pointer rounded-lg bg-gradient-to-r from-orange-500 to-orange-400 px-5 py-4 text-xl font-medium uppercase text-white xl:flex"
+                      className="cursor-pointer rounded-lg bg-gradient-to-r bg-[#00D8E0] px-5 py-4 text-xl font-medium uppercase text-white xl:flex"
                     >
                       Faça seu orçamento
                     </p>
@@ -116,7 +116,7 @@ export const MenuMobile = () => {
                   </div>
                   <div className="mb-9 flex flex-col items-center gap-10">
                     <p className="text-center max-w-[320px] text-2xl font-medium text-white sm:max-w-full sm:font-bold">
-                      @2024 Trut Ambientes Planejados LTDA
+                      @2025 Pedro de Sousa
                     </p>
                   </div>
                 </div>
