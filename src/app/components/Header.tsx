@@ -12,12 +12,12 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <Link href="#">
             <Image
-              width={80}
-              height={40}
               src="/logo.png"
-              priority
               alt="Logo"
-              className="w-20 sm:h-full sm:w-24"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-20 h-auto sm:w-24"
             />
           </Link>
         </div>
