@@ -1,49 +1,64 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Mail, Instagram, Github } from "lucide-react";
+import { Mail, Instagram, Github, BadgeCheck  } from "lucide-react";
 import Image from "next/image";
 import About from "../../../public/photoabout.jpg";
 
 export default function ProfileCard() {
   return (
-    <section className="min-h-screen w-full bg-[#0e0e0e] text-white py-20 px-4">
-     
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
+    <section className="min-h-screen w-full bg-[#0e0e0e] text-white py-24 px-8">
+         <section className="text-center py-20  text-white">
+      <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 text-sm text-white backdrop-blur-sm shadow-md mb-4">
+        <BadgeCheck className="w-4 h-4 text-white" />
+        Expert Designer
+      </div>
+
+      <h1 className="text-4xl md:text-5xl font-semibold text-white mb-4">
+        Pedro Augusto, <span className="text-neutral-400">Seu desenvolvedor</span>
+      </h1>
+
+      <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
+        Brief initial presentation of myself and my previous experiences.
+      </p>
+    </section>
+
+      
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         {/* Card da Esquerda */}
-        <div className="bg-[#1a1a1a] rounded-2xl p-6 w-full md:w-1/2 shadow-lg">
-          <div className="overflow-hidden rounded-xl mb-6">
+        <div className="bg-[#1a1a1a] rounded-3xl p-8 w-full md:w-1/2 shadow-2xl">
+          <div className="overflow-hidden rounded-3xl mb-8">
             <Image
               src={About}
               alt="Pedro Augusto"
-              width={600}
-              height={600}
-              className="rounded-xl"
+              width={700}
+              height={700}
+              className="rounded-3xl"
             />
           </div>
 
-          <p className="text-green-400 text-sm mb-2">
+          <p className="text-green-400 text-base mb-3">
             ● Disponível para Projetos
           </p>
-          <h2 className="text-2xl font-semibold">Olá, eu sou o Pedro Augusto</h2>
-          <p className="text-white/60 text-sm mb-4">
+          <h2 className="text-3xl font-semibold">Olá, eu sou o Pedro Augusto</h2>
+          <p className="text-white/70 text-lg mb-6">
             Programador e UX|UI Designer do Piauí
           </p>
 
           {/* Ícones sociais */}
-          <div className="flex gap-4 my-4">
-            <Instagram className="w-5 h-5 cursor-pointer hover:text-pink-500" />
-            <Github className="w-5 h-5 cursor-pointer hover:text-gray-300" />
-            <Mail className="w-5 h-5 cursor-pointer hover:text-blue-400" />
+          <div className="flex gap-6 my-6">
+            <Instagram className="w-6 h-6 cursor-pointer hover:text-pink-500" />
+            <Github className="w-6 h-6 cursor-pointer hover:text-gray-300" />
+            <Mail className="w-6 h-6 cursor-pointer hover:text-blue-400" />
           </div>
 
-          <Button className="w-full mt-4 bg-white text-black hover:bg-white/90">
+          <Button className="w-full mt-6 bg-white text-black hover:bg-white/90 text-xl py-4">
             Entre em Contato
           </Button>
         </div>
 
         {/* Card da Direita */}
-        <div className="bg-[#1a1a1a] rounded-2xl p-6 w-full md:w-1/2 shadow-lg">
-          <p className="text-white/80 mb-4">
+        <div className="bg-[#1a1a1a] rounded-3xl p-8 w-full md:w-1/2 shadow-2xl">
+          <p className="text-white/80 mb-6 text-lg">
             Sou Pedro Augusto, desenvolvedor Front-End apaixonado por
             transformar ideias em interfaces funcionais e intuitivas. Utilizo
             tecnologias modernas para entregar experiências digitais completas,
@@ -53,7 +68,7 @@ export default function ProfileCard() {
           </p>
 
           {/* Tags de skills */}
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-4 mb-8">
             {[
               "UI Design",
               "UX Design",
@@ -64,7 +79,7 @@ export default function ProfileCard() {
             ].map((skill) => (
               <Button
                 variant="secondary"
-                className="bg-[#2c2c2c] text-white"
+                className="bg-[#2c2c2c] text-white text-lg px-6 py-3"
                 key={skill}
               >
                 {skill}
@@ -88,7 +103,7 @@ export default function ProfileCard() {
             ].map((tech, i) => (
               <div
                 key={i}
-                className="flex justify-between py-3 text-sm text-white/80"
+                className="flex justify-between py-4 text-base text-white/80"
               >
                 <span>{tech}</span>
               </div>
