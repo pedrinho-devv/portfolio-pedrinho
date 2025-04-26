@@ -1,31 +1,48 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Mail, Instagram, Github, BadgeCheck  } from "lucide-react";
+import { Mail, Instagram, Github, BadgeCheck } from "lucide-react";
 import Image from "next/image";
 import About from "../../../public/photoabout.jpg";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function ProfileCard() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
   return (
     <section className="min-h-screen w-full bg-[#0e0e0e] text-white py-24 px-8">
-         <section className="text-center py-20  text-white">
-      <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 text-sm text-white backdrop-blur-sm shadow-md mb-4">
-        <BadgeCheck className="w-4 h-4 text-white" />
-        Expert Designer
-      </div>
+      <motion.section
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+        transition={{ duration: 0.4 }} // Animação rápida
+        className="text-center py-20 text-white"
+      >
+        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 text-sm text-white backdrop-blur-sm shadow-md mb-4">
+          <BadgeCheck className="w-4 h-4 text-white" />
+          Expert Designer
+        </div>
 
-      <h1 className="text-4xl md:text-5xl font-semibold text-white mb-4">
-        Pedro Augusto, <span className="text-neutral-400">Seu desenvolvedor</span>
-      </h1>
+        <h1 className="text-4xl md:text-5xl font-semibold text-white mb-4">
+          Pedro Augusto, <span className="text-neutral-400">Seu desenvolvedor</span>
+        </h1>
 
-      <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
-        Brief initial presentation of myself and my previous experiences.
-      </p>
-    </section>
+        <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
+          Brief initial presentation of myself and my previous experiences.
+        </p>
+      </motion.section>
 
-      
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
-        {/* Card da Esquerda */}
-        <div className="bg-[#1a1a1a] rounded-3xl p-8 w-full md:w-1/2 shadow-2xl">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -50 }}
+          transition={{ duration: 0.4 }}
+          className="bg-[#1a1a1a] rounded-3xl p-8 w-full md:w-1/2 shadow-2xl"
+        >
           <div className="overflow-hidden rounded-3xl mb-8">
             <Image
               src={About}
@@ -44,7 +61,6 @@ export default function ProfileCard() {
             Programador e UX|UI Designer do Piauí
           </p>
 
-          {/* Ícones sociais */}
           <div className="flex gap-6 my-6">
             <Instagram className="w-6 h-6 cursor-pointer hover:text-pink-500" />
             <Github className="w-6 h-6 cursor-pointer hover:text-gray-300" />
@@ -54,10 +70,15 @@ export default function ProfileCard() {
           <Button className="w-full mt-6 bg-white text-black hover:bg-white/90 text-xl py-4">
             Entre em Contato
           </Button>
-        </div>
+        </motion.div>
 
-        {/* Card da Direita */}
-        <div className="bg-[#1a1a1a] rounded-3xl p-8 w-full md:w-1/2 shadow-2xl">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 50 }}
+          transition={{ duration: 0.4 }}
+          className="bg-[#1a1a1a] rounded-3xl p-8 w-full md:w-1/2 shadow-2xl"
+        >
           <p className="text-white/80 mb-6 text-lg">
             Sou Pedro Augusto, desenvolvedor Front-End apaixonado por
             transformar ideias em interfaces funcionais e intuitivas. Utilizo
@@ -67,7 +88,6 @@ export default function ProfileCard() {
             soluções eficientes e impactantes.
           </p>
 
-          {/* Tags de skills */}
           <div className="flex flex-wrap gap-4 mb-8">
             {[
               "UI Design",
@@ -87,7 +107,6 @@ export default function ProfileCard() {
             ))}
           </div>
 
-          {/* Experiências */}
           <div className="divide-y divide-white/10">
             {[
               "HTML",
@@ -109,7 +128,7 @@ export default function ProfileCard() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

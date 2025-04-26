@@ -1,13 +1,12 @@
 "use client";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { motion, useMotionValue, useTransform } from "framer-motion";
+
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { fadeIn } from "../../lib/variants";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  // Pegando posição do mouse
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -18,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden pt-32 sm:pt-48">
+    <section className="relative min-h-screen w-full overflow-hidden pt-32 sm:pt-48">
       {/* Vídeo de fundo */}
       <video
         className="absolute left-0 top-0 h-full w-full object-cover z-[-1]"
@@ -34,48 +33,11 @@ const Hero = () => {
       {/* Overlay escura */}
       <div className="absolute inset-0 bg-gradient-to-tr from-black to-black/10 z-0" />
 
-      {/* Cards animados */}
-      <div className="pointer-events-none ml-96 absolute inset-0 z-10">
-        <motion.div
-          className="absolute bg-[#111] text-white p-4 rounded-xl shadow-lg max-w-[250px] text-sm"
-          animate={{
-            x: [0, 20, 0, -20, 0],
-            y: [0, -20, 0, 20, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          style={{ top: "30%", left: "20%" }}
-        >
-           Working with him was a game changer! 
-          <div className="mt-2 text-right text-xs text-gray-400">- pranavnb</div>
-        </motion.div>
-
-        <motion.div
-          className="absolute bg-[#111] text-white p-4 rounded-xl shadow-lg max-w-[250px] text-sm"
-          animate={{
-            x: [0, -20, 0, 20, 0],
-            y: [0, 20, 0, -20, 0],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          style={{ top: "60%", left: "50%" }}
-        >
-           Trabalho radiante e impecável!
-          <div className="mt-2 text-right text-xs text-gray-400">- Douglas Soares</div>
-        </motion.div>
-      </div>
-
       {/* Ponteiro personalizado */}
       <motion.div
         className="fixed top-0 left-0 z-50 w-6 h-6 bg-white rounded-full pointer-events-none"
         animate={{
-          x: mousePosition.x - 12, // Centraliza
+          x: mousePosition.x - 12,
           y: mousePosition.y - 12,
         }}
         transition={{
@@ -86,7 +48,9 @@ const Hero = () => {
       />
 
       {/* Conteúdo */}
-      <div className="relative z-10 mx-auto mb-16 w-full max-w-7xl px-5 sm:mb-32 xl:px-0 flex">
+      <div className="relative z-10 mx-auto mb-16 w-full max-w-7xl px-5 sm:mb-32 xl:px-0 flex flex-col items-start gap-20">
+        
+        {/* Textos principais */}
         <motion.div className="flex max-w-[620px] flex-col gap-10">
           <div className="flex w-full flex-col gap-5">
             <motion.h1
@@ -103,8 +67,7 @@ const Hero = () => {
               whileInView="show"
               className="max-w-[530px] text-lg text-[#CBCACA] sm:text-[26px] md:leading-tight"
             >
-              Desenvolvedor Web e UX|UI Design pronto para transformar suas
-              ideias em realidade.
+              Desenvolvedor Web e UX|UI Design pronto para transformar suas ideias em realidade.
             </motion.p>
           </div>
 

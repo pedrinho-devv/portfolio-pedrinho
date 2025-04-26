@@ -119,3 +119,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Esconde a barra de rolagem no navegador */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Para garantir que o scroll ainda funcione mesmo sem mostrar a barra */
+html, body {
+  -ms-overflow-style: none; /* Internet Explorer e Edge */
+  scrollbar-width: none;    /* Firefox */
+}
