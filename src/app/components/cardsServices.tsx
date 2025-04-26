@@ -7,8 +7,7 @@ export default function HomePage() {
   return (
     <section className="w-full bg-black py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-4xl font-bold text-white mb-10">Projetos em Destaque</h2>
-
+  
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {/* Projeto Principal */}
           <motion.a

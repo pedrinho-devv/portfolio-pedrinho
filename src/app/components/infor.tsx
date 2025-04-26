@@ -1,10 +1,10 @@
 "use client";
-import Image from 'next/image';
-import { FC } from 'react';
+import Image from "next/image";
+import { FC } from "react";
 
 const TechnologySection: FC = () => {
   return (
-    <section className="bg-[#1E1E1E] text-white py-16 px-4 sm:px-6 md:px-16">
+    <section className="bg-[#1E1E1E] text-white py-16 px-4 sm:px-6 md:px-16 rounded-tl-lg rounded-tr-lg">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <span className="text-xs sm:text-sm uppercase text-blue-400 tracking-widest">
@@ -15,8 +15,9 @@ const TechnologySection: FC = () => {
           </h2>
 
           <p className="text-gray-400 mt-6 text-base sm:text-lg">
-            Conecto estratégia, design e tecnologia para criar soluções digitais que impactam, encantam e convertem.
-            Seu projeto merece mais do que um site bonito — merece performance, inovação e crescimento real.
+            Conecto estratégia, design e tecnologia para criar soluções digitais
+            que impactam, encantam e convertem. Seu projeto merece mais do que
+            um site bonito — merece performance, inovação e crescimento real.
           </p>
 
           <div className="mt-8 space-y-8">
@@ -25,7 +26,8 @@ const TechnologySection: FC = () => {
                 🔥 Soluções que impulsionam seu negócio
               </h3>
               <p className="text-gray-400 mt-2 text-sm sm:text-base">
-                Desenvolvimento de interfaces intuitivas, focadas em maximizar a usabilidade e a satisfação dos seus usuários.
+                Desenvolvimento de interfaces intuitivas, focadas em maximizar a
+                usabilidade e a satisfação dos seus usuários.
               </p>
             </div>
 
@@ -34,7 +36,8 @@ const TechnologySection: FC = () => {
                 📱 Design responsivo e experiência mobile-first
               </h3>
               <p className="text-gray-400 mt-2 text-sm sm:text-base">
-                Seu site adaptado para todos os dispositivos, proporcionando acesso perfeito onde quer que seu público esteja.
+                Seu site adaptado para todos os dispositivos, proporcionando
+                acesso perfeito onde quer que seu público esteja.
               </p>
             </div>
           </div>
@@ -49,7 +52,8 @@ const TechnologySection: FC = () => {
             className="rounded-xl shadow-2xl object-contain"
           />
           <p className="text-gray-400 text-center md:text-right mt-6 max-w-sm sm:max-w-md text-sm sm:text-base">
-            Estou sempre em evolução com as principais tendências e tecnologias, para que você esteja sempre um passo à frente da concorrência.
+            Estou sempre em evolução com as principais tendências e tecnologias,
+            para que você esteja sempre um passo à frente da concorrência.
           </p>
         </div>
       </div>
