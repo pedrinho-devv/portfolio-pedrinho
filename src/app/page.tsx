@@ -2,7 +2,9 @@ import CardsServices from "./components/cardsServices";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProfileCard from "./components/About";
+import TechnologySection from "./components/infor";
 import ProjectsCarousel from "./components/ProjectsCarousel";
+import ContactSection from "./components/contact";
 
 
 export default function Home() {
@@ -12,7 +14,9 @@ export default function Home() {
     <Hero/>
     <CardsServices/>
     <ProfileCard/>
+    <TechnologySection/>
     <ProjectsCarousel/>
+    <ContactSection/>
 
     </main>
   );
