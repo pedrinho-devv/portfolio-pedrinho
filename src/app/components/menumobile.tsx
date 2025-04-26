@@ -14,7 +14,7 @@ export const MenuMobile = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-1/2 z-10 flex w-full -translate-x-1/2 justify-around rounded-t-3xl bg-zinc-900 px-6 py-3 shadow-lg sm:hidden">
+    <nav className="fixed bottom-0 left-1/2 z-10 flex w-full -translate-x-1/2 justify-around rounded-t-3xl bg-zinc-900 bg-opacity-80 backdrop-blur-md px-6 py-3 shadow-lg sm:hidden">
       {navItems.map((item) => (
         <Link
           key={item.href}

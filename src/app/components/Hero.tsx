@@ -6,19 +6,30 @@ import { fadeIn } from "../../lib/variants";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Se largura for 768px ou menos, é mobile
+    };
+
+    window.addEventListener("resize", checkMobile);
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    
+    checkMobile(); // Rodar uma vez ao carregar
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", checkMobile);
+    };
   }, []);
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden pt-32 sm:pt-48">
-      {/* Vídeo de fundo */}
       <video
         className="absolute left-0 top-0 h-full w-full object-cover z-[-1]"
         autoPlay
@@ -30,27 +41,26 @@ const Hero = () => {
         Seu navegador não suporta vídeos em HTML5.
       </video>
 
-      {/* Overlay escura */}
       <div className="absolute inset-0 bg-gradient-to-tr from-black to-black/10 z-0" />
 
-      {/* Ponteiro personalizado */}
-      <motion.div
-        className="fixed top-0 left-0 z-50 w-6 h-6 bg-white rounded-full pointer-events-none"
-        animate={{
-          x: mousePosition.x - 12,
-          y: mousePosition.y - 12,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 300,
-          damping: 30,
-        }}
-      />
+      {/* Ponteiro personalizado (só aparece se NÃO for mobile) */}
+      {!isMobile && (
+        <motion.div
+          className="fixed top-0 left-0 z-50 w-6 h-6 bg-white rounded-full pointer-events-none"
+          animate={{
+            x: mousePosition.x - 12,
+            y: mousePosition.y - 12,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 30,
+          }}
+        />
+      )}
 
       {/* Conteúdo */}
       <div className="relative z-10 mx-auto mb-16 w-full max-w-7xl px-5 sm:mb-32 xl:px-0 flex flex-col items-start gap-20">
-        
-        {/* Textos principais */}
         <motion.div className="flex max-w-[620px] flex-col gap-10">
           <div className="flex w-full flex-col gap-5">
             <motion.h1
@@ -77,12 +87,9 @@ const Hero = () => {
             whileInView="show"
             className="flex gap-4"
           >
-            <p
-              className="flex w-full max-w-[160px] cursor-pointer items-center justify-center rounded-lg border border-[#00D8E0] px-4 py-3 text-center text-sm font-bold uppercase text-[#00D8E0] transition-all duration-300 hover:scale-105 sm:text-base"
-            >
+            <p className="flex w-full max-w-[160px] cursor-pointer items-center justify-center rounded-lg border border-[#00D8E0] px-4 py-3 text-center text-sm font-bold uppercase text-[#00D8E0] transition-all duration-300 hover:scale-105 sm:text-base">
               Contato
             </p>
-
             <p
               onClick={() => alert("Outro botão")}
               className="flex w-full max-w-[160px] cursor-pointer items-center justify-center rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-400 px-4 py-3 text-center text-sm font-bold uppercase text-white transition-all duration-300 hover:scale-105 sm:text-base"

@@ -13,7 +13,7 @@ export default function Home() {
   useLenis();
 
   return (
-    <main className="flex min-h-screen w-full flex-col">
+    <main className="flex min-h-screen w-full flex-col pb-24">
       <Header />
       <Hero />
       <CardsServices />
