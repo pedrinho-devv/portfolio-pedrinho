@@ -7,7 +7,6 @@ export default function HomePage() {
   return (
     <section className="w-full bg-black py-20">
       <div className="mx-auto max-w-7xl px-6">
-  
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {/* Projeto Principal */}
           <motion.a
@@ -23,12 +22,6 @@ export default function HomePage() {
                 fill
                 className="object-cover group-hover:scale-110 transition-all duration-500 rounded-2xl"
               />
-            </div>
-
-            {/* Informações normais (antes do hover) */}
-            <div className="absolute bottom-4 left-4 bg-black/60 px-4 py-2 rounded-lg transition-all duration-500 group-hover:opacity-0">
-              <h3 className="text-white text-2xl font-semibold">AtomAI</h3>
-              <p className="text-sm text-white/70">Social Media Growth Made Easy</p>
             </div>
 
             {/* Texto "Ver Projeto" aparece no hover */}
@@ -58,7 +51,9 @@ export default function HomePage() {
 
                 {/* Texto "Ver Projeto" só no hover para os pequenos */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <p className="text-white text-lg font-semibold">Ver Projeto →</p>
+                  <p className="text-white text-lg font-semibold">
+                    Ver Projeto →
+                  </p>
                 </div>
               </motion.a>
             ))}
