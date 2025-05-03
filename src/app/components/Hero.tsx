@@ -19,7 +19,7 @@ const Hero = () => {
 
     window.addEventListener("resize", checkMobile);
     window.addEventListener("mousemove", handleMouseMove);
-    
+
     checkMobile(); // Rodar uma vez ao carregar
 
     return () => {
@@ -77,7 +77,8 @@ const Hero = () => {
               whileInView="show"
               className="max-w-[530px] text-lg text-[#CBCACA] sm:text-[26px] md:leading-tight"
             >
-              Desenvolvedor Web e UX|UI Design pronto para transformar suas ideias em realidade.
+              Desenvolvedor Web e UX|UI Design pronto para transformar suas
+              ideias em realidade.
             </motion.p>
           </div>
 
@@ -87,15 +88,22 @@ const Hero = () => {
             whileInView="show"
             className="flex gap-4"
           >
-            <p className="flex w-full max-w-[160px] cursor-pointer items-center justify-center rounded-lg border border-[#00D8E0] px-4 py-3 text-center text-sm font-bold uppercase text-[#00D8E0] transition-all duration-300 hover:scale-105 sm:text-base">
+            <a
+              href="https://wa.me/5586981827011"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex w-full max-w-[160px] cursor-pointer items-center justify-center rounded-lg border border-[#00D8E0] px-4 py-3 text-center text-sm font-bold uppercase text-[#00D8E0] transition-all duration-300 hover:scale-105 sm:text-base"
+            >
               Contato
-            </p>
-            <p
-              onClick={() => alert("Outro botão")}
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pedro-augusto-sousa/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex w-full max-w-[160px] cursor-pointer items-center justify-center rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-400 px-4 py-3 text-center text-sm font-bold uppercase text-white transition-all duration-300 hover:scale-105 sm:text-base"
             >
               Linkedin
-            </p>
+            </a>
           </motion.div>
         </motion.div>
       </div>

@@ -6,28 +6,27 @@ import About from "../../../public/photoabout.jpg";
 import { useInView } from "react-intersection-observer";
 
 export default function ProfileCard() {
-  const { ref, } = useInView({
+  const { ref } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
 
   return (
     <section className="min-h-screen w-full bg-[#0e0e0e] text-white py-24 px-8">
-      <section
-        ref={ref}
-        className="text-center py-20 text-white"
-      >
+      <section ref={ref} className="text-center py-20 text-white">
         <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 text-sm text-white backdrop-blur-sm shadow-md mb-4">
           <BadgeCheck className="w-4 h-4 text-white" />
-          Expert Designer
+          Programador e UX|UI Designer
         </div>
 
         <h1 className="text-4xl md:text-5xl font-semibold text-white mb-4">
-          Pedro Augusto, <span className="text-neutral-400">Seu desenvolvedor</span>
+          Pedro Augusto,{" "}
+          <span className="text-neutral-400">Seu desenvolvedor</span>
         </h1>
 
         <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
-          Brief initial presentation of myself and my previous experiences.
+          Tornando suas ideias realidade com design e desenvolvimento de alta
+          qualidade.
         </p>
       </section>
 
@@ -47,9 +46,12 @@ export default function ProfileCard() {
           </div>
 
           <p className="text-green-400 text-base mb-3">
-            ● Disponível para Projetos
+            <span className="blink glow">●</span> Disponível para Projetos
           </p>
-          <h2 className="text-3xl font-semibold">Olá, eu sou o Pedro Augusto</h2>
+
+          <h2 className="text-3xl font-semibold">
+            Olá, eu sou o Pedro Augusto
+          </h2>
           <p className="text-white/70 text-lg mb-6">
             Programador e UX|UI Designer do Piauí
           </p>
@@ -60,9 +62,16 @@ export default function ProfileCard() {
             <Mail className="w-6 h-6 cursor-pointer hover:text-blue-400" />
           </div>
 
-          <Button className="w-full mt-6 bg-white text-black hover:bg-white/90 text-xl py-4">
-            Entre em Contato
-          </Button>
+          <a
+            href="https://wa.me/5586981827011"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
+          >
+            <Button className="w-full mt-6 bg-white text-black hover:bg-white/90 text-xl py-7">
+              Entre em Contato
+            </Button>
+          </a>
         </div>
 
         <div

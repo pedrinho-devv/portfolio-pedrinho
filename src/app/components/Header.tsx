@@ -51,14 +51,19 @@ export default function Header() {
               >
                 Contato
               </a>
-              <div className="bg-[#00D8E0] px-9 py-3 rounded-2xl hover:bg-transparent hover:border hover:border-[#00D8E0] hover:text-[#00D8E0] transition-all duration-300 cursor-pointer">
+              <a
+                href="https://github.com/pedrinho-devv"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#00D8E0] px-7 py-3 rounded-2xl hover:bg-transparent hover:border hover:border-[#00D8E0] hover:text-[#00D8E0] transition-all duration-300 cursor-pointer"
+              >
                 <GithubIcon />
-              </div>
+              </a>
             </div>
           </nav>
         </div>
       </header>
-      
+
       {/* Menu Mobile */}
       <div className="xl:hidden">
         <MenuMobile />

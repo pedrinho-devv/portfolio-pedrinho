@@ -131,3 +131,30 @@ html, body {
   -ms-overflow-style: none; /* Internet Explorer e Edge */
   scrollbar-width: none;    /* Firefox */
 }
+
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #22c55e, 0 0 10px #22c55e, 0 0 20px #22c55e;
+  }
+  50% {
+    text-shadow: 0 0 2px #22c55e, 0 0 4px #22c55e, 0 0 8px #22c55e;
+  }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+.glow {
+  animation: glow 2s infinite ease-in-out;
+}
