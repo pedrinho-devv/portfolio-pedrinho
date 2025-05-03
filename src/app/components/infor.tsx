@@ -4,7 +4,7 @@ import { FC } from "react";
 
 const TechnologySection: FC = () => {
   return (
-    <section className="bg-[#1E1E1E] text-white py-16 px-4 sm:px-6 md:px-16 rounded-tl-lg rounded-tr-lg">
+    <section id="info" className="bg-[#1E1E1E] text-white py-16 px-4 sm:px-6 md:px-16 rounded-tl-lg rounded-tr-lg">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <span className="text-xs sm:text-sm uppercase text-blue-400 tracking-widest">

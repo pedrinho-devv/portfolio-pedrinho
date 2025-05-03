@@ -7,7 +7,7 @@ import footerLogo from "@/../public/Logo.png";
 
 const ContactSection: FC = () => {
   return (
-    <section className="bg-[#1E1E1E] text-white pt-24 pb-0 px-6 md:px-16 relative overflow-hidden">
+    <section id="contato" className="bg-[#1E1E1E] text-white pt-24 pb-0 px-6 md:px-16 relative overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center space-y-16">
         {/* Título */}
         <div>

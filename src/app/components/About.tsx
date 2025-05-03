@@ -12,7 +12,7 @@ export default function ProfileCard() {
   });
 
   return (
-    <section className="min-h-screen w-full bg-[#0e0e0e] text-white py-24 px-8">
+    <section id="sobre" className="min-h-screen w-full bg-[#0e0e0e] text-white py-24 px-8">
       <section ref={ref} className="text-center py-20 text-white">
         <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 text-sm text-white backdrop-blur-sm shadow-md mb-4">
           <BadgeCheck className="w-4 h-4 text-white" />

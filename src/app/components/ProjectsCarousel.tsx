@@ -103,7 +103,7 @@ export default function GaleriaProjetos() {
   };
 
   return (
-    <section className="bg-neutral-900 text-white py-20 px-6">
+    <section id="projetos" className="bg-neutral-900 text-white py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Título */}
         <div className="relative w-full text-center py-24">
