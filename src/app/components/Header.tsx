@@ -10,7 +10,7 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-1/2 z-[50] w-full max-w-5xl -translate-x-1/2 items-center justify-between border border-white/20 px-5 py-2 backdrop-blur-md sm:mt-5 sm:w-[98%] sm:rounded-3xl md:backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between py-2 sm:px-3">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 sm:justify-center">
             <Link href="/">
               <Image
                 src="/Logo.png"

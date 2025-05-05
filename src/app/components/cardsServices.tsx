@@ -1,9 +1,16 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Pre from "../../../public/pre1.jpg";
+import Pre from "../../../public/prev2.png";
+import Prev2 from "../../../public/prev3.png";
 
 export default function HomePage() {
+  const projetosLaterais = [
+    // { title: "Projeto 2", image: Pre1 },
+    { title: "Projeto 3", image: Prev2 },
+    { title: "Projeto 4", image: Pre },
+  ];
+
   return (
     <section className="w-full bg-black py-20">
       <div className="mx-auto max-w-7xl px-6">
@@ -23,8 +30,6 @@ export default function HomePage() {
                 className="object-cover group-hover:scale-110 transition-all duration-500 rounded-2xl"
               />
             </div>
-
-            {/* Texto "Ver Projeto" aparece no hover */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
               <p className="text-white text-2xl font-semibold">Ver Projeto →</p>
             </div>
@@ -32,7 +37,7 @@ export default function HomePage() {
 
           {/* Miniaturas laterais */}
           <div className="grid grid-cols-1 gap-6">
-            {["Projeto 2", "Projeto 3"].map((title, i) => (
+            {projetosLaterais.map((projeto, i) => (
               <motion.a
                 key={i}
                 href="#"
@@ -42,18 +47,14 @@ export default function HomePage() {
               >
                 <div className="relative w-full h-[250px] md:h-[300px] overflow-hidden">
                   <Image
-                    src={Pre}
-                    alt={title}
+                    src={projeto.image}
+                    alt={projeto.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-all duration-500 rounded-2xl"
                   />
                 </div>
-
-                {/* Texto "Ver Projeto" só no hover para os pequenos */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <p className="text-white text-lg font-semibold">
-                    Ver Projeto →
-                  </p>
+                  <p className="text-white text-lg font-semibold">Ver Projeto →</p>
                 </div>
               </motion.a>
             ))}
