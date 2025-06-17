@@ -3,7 +3,7 @@ import { FC } from "react";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import footerLogo from "@/../public/Logo.png";
+import footerLogo from "@/../public/newlogo.png";
 
 const ContactSection: FC = () => {
   return (

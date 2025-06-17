@@ -100,7 +100,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/pedro-augusto-sousa/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full max-w-[160px] cursor-pointer items-center justify-center rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-400 px-4 py-3 text-center text-sm font-bold uppercase text-white transition-all duration-300 hover:scale-105 sm:text-base"
+              className="flex w-full max-w-[160px] cursor-pointer items-center justify-center rounded-lg bg-gradient-to-r bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-500 px-4 py-3 text-center text-sm font-bold uppercase text-white transition-all duration-300 hover:scale-105 sm:text-base"
             >
               Linkedin
             </a>

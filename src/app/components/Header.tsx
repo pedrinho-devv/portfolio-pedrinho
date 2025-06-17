@@ -13,7 +13,7 @@ export default function Header() {
           <div className="flex items-center gap-3 sm:justify-center">
             <Link href="/">
               <Image
-                src="/Logo.png"
+                src="/newlogo.png"
                 alt="Logo"
                 width={100}
                 height={50}
@@ -44,7 +44,7 @@ export default function Header() {
                 href="https://github.com/pedrinho-devv"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#00D8E0] px-7 py-3 rounded-2xl hover:bg-transparent hover:border hover:border-[#00D8E0] hover:text-[#00D8E0] transition-all duration-300 cursor-pointer"
+                className="bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-500 px-7 py-3 rounded-2xl transition-all duration-300 cursor-pointer"
               >
                 <GithubIcon />
               </Link>

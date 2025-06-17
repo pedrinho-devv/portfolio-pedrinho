@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Instagram, Github, BadgeCheck } from "lucide-react";
 import Image from "next/image";
-import About from "../../../public/photoabout.jpg";
+import About from "../../../public/sobre.jpg";
 import { useInView } from "react-intersection-observer";
 
 export default function ProfileCard() {

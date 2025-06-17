@@ -45,7 +45,7 @@ const TechnologySection: FC = () => {
 
         <div className="flex flex-col items-center md:items-end">
           <Image
-            src="/bannerlogo.jpg"
+            src="/banner.jpg"
             alt="Interface de desenvolvimento"
             width={500}
             height={320}
